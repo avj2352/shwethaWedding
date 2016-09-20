@@ -1,0 +1,12 @@
+<div>
+    <h3>Welcome to the Wedding Well wishes</h3>
+    <ul>
+      <li ng-repeat="chat in chatList | reverse">
+        <div class="myChat">
+          <p>{{chat.comment}}</p>
+          <p>{{chat.name}}</p>
+        </div>
+      </li>
+      <hr>
+    </ul>
+</div>

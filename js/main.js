@@ -1,8 +1,9 @@
 //Main TurnJS script below;
 (function($) {
+  // Adding Granim JS for Gradient Effect
+  //debugger;
   //Prelader for the wedding card
   $('body').loadie(); // Change the wrapper if wanted.
-  
     //Initialize the wedding card
     function loadApp() {
         $('#canvas').fadeIn(1000);

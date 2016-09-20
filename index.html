@@ -1,41 +1,89 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<title>Wedding Template</title>
-<meta name="viewport" content="width = 1050, user-scalable = no" />
-<!-- <link rel="icon" type="image/png" href="../../pics/favicon.png" /> -->
-<link rel="stylesheet" href="css/main.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
-<!-- <script type="text/javascript" src="extras/jquery.min.1.7.js"></script> -->
-<script type="text/javascript" src="lib/jquery.loadie.min.js"></script>
-<script type="text/javascript" src="extras/jquery-ui-1.8.20.custom.min.js"></script>
-<script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
-<script type="text/javascript" src="lib/hash.js"></script>
+	<title>Wedding Template</title>
+	<meta name="viewport" content="width = 1050, user-scalable = no" />
+	<!-- <link rel="icon" type="image/png" href="../../pics/favicon.png" /> -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<!-- jQuery Core -->
+	<!-- <script type="text/javascript" src="extras/jquery.min.1.7.js"></script> -->
+	<script type="text/javascript" src="lib/jquery.loadie.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="extras/jquery-ui-1.8.20.custom.min.js"></script>
+	<script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
+	<script type="text/javascript" src="lib/hash.js"></script>
 </head>
-<body>
-<!-- jSplash Screen -->
-<!-- This section is for Splash Screen -->
-<!-- End of Splash Screen -->
-<!-- end: jSplash Screen -->
-<!-- Main Turn JS flipbook -->
-<div id="canvas">
-<div class="zoom-icon zoom-icon-in"></div>
-<div class="magazine-viewport">
-	<div class="container">
-		<div class="magazine">
-			<!-- Next button -->
-			<div ignore="1" class="next-button"></div>
-			<!-- Previous button -->
-			<div ignore="1" class="previous-button"></div>
+
+<body ng-app="myApp">
+<div ng-controller="mainController">
+	<div id="canvas">
+		<!-- Logo Granim JS -->
+		<div class="mainHeading container">
+			<h1>Shwetha weds Pramod</h1>
+			<p>Welcome to the online Wedding invite.</p>
+			<div class="row">
+				<a href="#" class="btn btn-danger" data-toggle="modal" data-target="#myModal">{{postBtn}}</a>
+				<a href="#" class="btn btn-danger">{{venueBtn}}</a>
+				<a ng-click="turnPage('.magazine-viewport')" class="btn btn-danger">{{flipBtn}}</a></div>
+		</div>
+		<!-- end:Logo Granim JS -->
+		<!-- Main Turn JS flipbook -->
+		<div class="zoom-icon zoom-icon-in"></div>
+		<div class="magazine-viewport">
+			<div class="container">
+				<div class="magazine">
+					<!-- Next button -->
+					<div ignore="1" class="next-button"></div>
+					<!-- Previous button -->
+					<div ignore="1" class="previous-button"></div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div id="slider-bar" class="turnjs-slider">
+					<div id="slider"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Main Turn JS flipbook -->
+		<div class="row mapSection">
+			<div class="container">
+				<h2>Map Section</h2>
+				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+				<wedding-form></wedding-form>
+			</div>
+		</div>
+		<div class="row chatSection">
+			<div class="container">
+				<h2>Chat Section</h2>
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title">Panel success</h3>
+					</div>
+					<div class="panel-body">
+						<wedding-post></wedding-post>
+					</div>
+					<!-- end:panel-body -->
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="bottom">
-		<div id="slider-bar" class="turnjs-slider">
-			<div id="slider"></div>
-		</div>
-	</div>
+	<!--end: canvas -->
 </div>
-<!-- end:Main Turn JS flipbook -->
-<script src="js/main.js"></script>
+	<!-- end:Main Turn JS flipbook -->
+	<!-- Firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<script src="lib/angular.min.js"></script>
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+	<script src="lib/angular-animate.min.js"></script>
+	<script src="lib/granim.js"></script>
+	<script src="js/main.js"></script>
+	<!-- Angular Firebase application -->
+	<script src="js/app.js"></script>
+	<script src="weddingPost/weddingPostComponent.js"></script>
+	<script src="weddingForm/weddingFormComponent.js"></script>
 </body>
 </html>
