@@ -21,11 +21,18 @@
     var vm = $scope;
     vm.postBtn = "Post a Wish";
     vm.venueBtn = "Venue Details";
-    vm.flipBtn = "Flip Card";
+    vm.nextPage = "Next Page";
+    vm.prevPage = "Previous Page";
 
-    vm.turnPage = function(context){
+    vm.turnNext = function(){
       $('.magazine').turn("next");
-    };
+    };//end:turnNext
+
+    vm.turnPrev = function(){
+      $('.magazine').turn("previous");
+    };//end:turnPrev
+
+
   }//end:mainController
 }());//IIFE
 /*Reverse filter to reverse the Array items*/

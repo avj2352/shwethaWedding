@@ -25,9 +25,11 @@
 			<h1>Shwetha weds Pramod</h1>
 			<p>Welcome to the online Wedding invite.</p>
 			<div class="row">
-				<a href="#" class="btn btn-danger" data-toggle="modal" data-target="#myModal">{{postBtn}}</a>
-				<a href="#" class="btn btn-danger">{{venueBtn}}</a>
-				<a ng-click="turnPage('.magazine-viewport')" class="btn btn-danger">{{flipBtn}}</a></div>
+				<a ng-click="turnPrev()" class="btn btn-danger">{{prevPage}}</a>
+				<a class="btn btn-danger" data-toggle="modal" data-target="#myModal">{{postBtn}}</a>
+				<a class="btn btn-danger">{{venueBtn}}</a>
+				<a ng-click="turnNext()" class="btn btn-danger">{{nextPage}}</a>
+			</div>
 		</div>
 		<!-- end:Logo Granim JS -->
 		<!-- Main Turn JS flipbook -->
@@ -50,23 +52,13 @@
 		<!-- Main Turn JS flipbook -->
 		<div class="row mapSection">
 			<div class="container">
-				<h2>Map Section</h2>
-				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+				<h2>Map Section</h2>				
 				<wedding-form></wedding-form>
 			</div>
 		</div>
 		<div class="row chatSection">
 			<div class="container">
-				<h2>Chat Section</h2>
-				<div class="panel panel-success">
-					<div class="panel-heading">
-						<h3 class="panel-title">Panel success</h3>
-					</div>
-					<div class="panel-body">
-						<wedding-post></wedding-post>
-					</div>
-					<!-- end:panel-body -->
-				</div>
+				<wedding-post></wedding-post>
 			</div>
 		</div>
 	</div>
@@ -79,7 +71,6 @@
 	<!-- AngularFire -->
 	<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
 	<script src="lib/angular-animate.min.js"></script>
-	<script src="lib/granim.js"></script>
 	<script src="js/main.js"></script>
 	<!-- Angular Firebase application -->
 	<script src="js/app.js"></script>
