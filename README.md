@@ -13,5 +13,10 @@
 
 ### 20th September 2016 - TurnJS & Modal
 #### Removed Granim.js
-#### Added Modal Component - LoginFromComponent
+#### Added Modal Component - weddingFormComponent
 #### Integrated Flipbook event with Turn JS
+
+### 23rd September 2016 - UI for Wishes Panel & Like Button
+#### Completed weddingPostComponent
+#### Completed the Like button integration with Firebase
+#### Added the CSS styling for the weddingPostComponent
