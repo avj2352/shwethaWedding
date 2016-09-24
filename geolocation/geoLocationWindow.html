@@ -1,0 +1,25 @@
+<div class="geoLocationBox">
+  <!-- <h1>{{title}}</h1> -->
+  <div ng-if="!!geoLocationText">
+  <p id="location"> {{geoLocationText}} </p>
+  <p>TimeStamp when the location was taken : {{geoTimeStamp}}</p>
+  </div>
+  <div ng-if="!geoLocationText">
+  <p>Loading Map Details....</p>
+  </div>
+  <div class="myGoogleMap container">
+    <div class="loadingMap col-md-4">
+      <p>Loading...</p>
+      <div class="progress progress-striped active"> <div class="progress-bar" style="width: 100%"></div></div>
+    </div>
+    <div class="mapArea" id="mapArea"></div>
+  </div>
+  <!-- <button type="button" class="btn btn-danger btn-sm" ng-click="startTacking()" name="Start Button">Start Tracking</button> -->
+  <!-- <button type="button" class="btn btn-success btn-sm" ng-click="clearTacking()" name="Stop Button">Stop Tracking</button> -->
+
+  <div class="">&nbsp; </div>
+  <div class="">&nbsp; </div>
+  <div class="">&nbsp; </div>
+  <div class="">&nbsp; </div>
+  <div class="">&nbsp; </div>
+</div>
