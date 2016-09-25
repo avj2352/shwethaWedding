@@ -20,3 +20,9 @@
 #### Completed weddingPostComponent
 #### Completed the Like button integration with Firebase
 #### Added the CSS styling for the weddingPostComponent
+
+
+### 25th September 2016 - Completed Geolocation Integration
+#### Added Geolocation position
+#### Added Google Map angular Plugin
+#### Added Google Map InfoWindow and Marker
