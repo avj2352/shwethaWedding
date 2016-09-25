@@ -28,15 +28,31 @@
 
         vm.showMap = function(coords){
           // debugger;
-          var googleLatLong = new google.maps.LatLng(coords.latitude, coords.longitude);
+          //Methodist Church - 12.963642, 77.603229
+          var methodistChurchLatLong = {lat: 12.963642, lng: 77.603229};
+          var vasaviChurchLatLong = {lat: 12.948761, lng: 77.576213}; //12.948761, 77.576213
+          var centreLocation = {lat:12.958585, lng:77.586993};//12.958585, 77.586993
+          var googleLatLong = new google.maps.LatLng(12.958585, 77.586993);
           //Specify Google map with Properties
           var mapOptions = {
-            zoom:15,
+            zoom:14,
             center:googleLatLong,
             mapTypeId:'roadmap'
           };
           var mapDiv = document.getElementById('mapArea');
           var myGoogleMap = new google.maps.Map(mapDiv,mapOptions);
+          //Setting a Marker to the Google Maps location
+          var marker1 = new google.maps.Marker({
+              position: methodistChurchLatLong,
+              map: myGoogleMap,
+              title: 'Wedding Methodist Church'
+          });
+          //Setting another marker to the Google Maps Location
+          var marker2 = new google.maps.Marker({
+              position: vasaviChurchLatLong,
+              map: myGoogleMap,
+              title: 'Vasavi Convention Centre'
+          });
           if(myGoogleMap){
               vm.isLoadedMap = true;
           }//end:myGoogleMap is loaded
