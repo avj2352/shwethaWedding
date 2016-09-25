@@ -26,3 +26,5 @@
 #### Added Geolocation position
 #### Added Google Map angular Plugin
 #### Added Google Map InfoWindow and Marker
+#### Created a initializerGoogleMaps Angular JS Service
+This cool script will always load the Google Maps first before creating new Google Map object.
