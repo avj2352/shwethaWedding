@@ -1,15 +1,13 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-	<title>Wedding Template</title>
+	<title>Pramod Weds Shwe</title>
 	<meta name="viewport" content="width = 1050, user-scalable = no" />
 	<!-- <link rel="icon" type="image/png" href="../../pics/favicon.png" /> -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<!-- jQuery Core -->
-	<!-- <script type="text/javascript" src="extras/jquery.min.1.7.js"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="lib/jquery.loadie.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="extras/jquery-ui-1.8.20.custom.min.js"></script>
@@ -27,7 +25,7 @@
 			<div class="row">
 				<a ng-click="turnPrev()" class="btn btn-danger">{{prevPage}}</a>
 				<a class="btn btn-danger" data-toggle="modal" data-target="#myModal">{{postBtn}}</a>
-				<a class="btn btn-danger">{{venueBtn}}</a>
+				<a class="btn btn-danger" href="#venueDetails">{{venueBtn}}</a>
 				<a ng-click="turnNext()" class="btn btn-danger">{{nextPage}}</a>
 			</div>
 		</div>
@@ -50,25 +48,31 @@
 			</div>
 		</div>
 		<!-- Main Turn JS flipbook -->
-		<div class="row mapSection">
-			<div class="container">
-				<h1>Venue Map</h1>
-				<geo-map></geo-map>
-			</div>
-		</div>
+		<!-- Chat Section -->
+		<a id="chatDetails"></a>
 		<div class="row chatSection">
 			<div class="container">
 				<h1>Chat Section</h1>
 				<wedding-form></wedding-form>
 				<wedding-post></wedding-post>
 			</div>
-		</div>
+		</div><!-- end:Chat Section -->
+
+		<a id="venueDetails"></a>
+		<!-- Map Section -->
+		<div class="row mapSection">
+			<div class="container">
+				<h1>Venue Map</h1>
+				<geo-map></geo-map>
+			</div>
+		</div><!-- end:Map Section -->
 	</div>
 	<!--end: canvas -->
 </div>
+	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 	<!-- end:Main Turn JS flipbook -->
-	<!-- Firebase -->
 	<!-- <script async src="http://maps.google.com/maps/api/js?key=AIzaSyCSL5fxrTbT-3BnC_g-evmuGtJo9UuwF5U"></script> -->
+	<!-- Firebase -->
 	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 	<script src="lib/angular.min.js"></script>
 	<!-- AngularFire -->

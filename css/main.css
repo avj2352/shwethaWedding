@@ -1,14 +1,15 @@
 @import 'https://fonts.googleapis.com/css?family=Pacifico|Satisfy';
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");/*!
 /*Wedding website template*/
 body{ overflow:hidden; overflow-y: scroll; background-color:#fcfcfc; margin:0; padding:0; }
 
 .mainHeading{ text-align: center; display: block; position: relative; /*margin-bottom: 10px;*/ /*z-index: 1000;*/ }
-.mapSection{ position: relative; background-color: #fff; display: block; }
 .chatSection{ position: relative; background-color: #fff; display: block; }
+.mapSection{ position: relative; background-color: #fff; display: block; }
 .magazine-viewport{ position: absolute; display: block; /*border: 1px solid red;*/ /*height: 640px;*/ }
 
 /*Wedding Post CSS*/
-.messageTitle{color: white; font-family: 'Pacifico', cursive; font-size: 25px;}
+.messageTitle{ position: relative; top:5px;color: white; font-family: 'Pacifico', cursive; font-size: 25px;}
 .messageBoard{ height: 450px; overflow-y: scroll; overflow-x:hidden; }
 .messagesList{ position:relative; border: 3px solid rgba(243, 221, 67, 0.4); margin: 10px 5px 18px; color: white; padding: 25px 35px 60px; border-radius: 15px;
 
@@ -29,7 +30,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7d765', end
 .messageOptions span.messageLikes {position:relative;color: #419fc1; border: 3px solid rgba(243, 221, 67, 0.7); border-radius: 15px; top:-4px; background-color: white; padding: 5px; }
 span.messageLikes img{position: relative; top: -3px;}
 .btn-rounded{position: relative; border: 3px solid rgba(243, 221, 67, 0.7); top:-3px; border-radius: 15px;}
-.titleSubmitButton{position: relative; left: 45%;}
+.titleSubmitButton{position: relative; top:-5px; left: 10%; border:2px solid; border-radius:15px; font-family: 'Open Sans';}
 .myGoogleMap{ text-align: center; }
 .loadingMap{float:none; margin: auto;}
+.centeredDiv {float:none; margin:auto;}
 .mapArea{float:none; margin: auto; width: 100%; height: 470px; border-radius: 15px;}
+.chatSuccessImg{position: relative; top:25px; left: 75%;}
+.successDiv{border-radius: 15px; font-size: 15px;}
+.successDiv a{ color: white;}

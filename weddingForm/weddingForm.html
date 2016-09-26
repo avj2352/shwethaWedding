@@ -5,36 +5,48 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Submit your post</h4>
+                    <h4 class="modal-title">Post your Wish here!!</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal">
-                        <fieldset>
-                            <legend>Legend</legend>
-                            <div class="form-group">
-                                <label for="inputEmail" class="col-lg-2 control-label">Name</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="inputName" ng-model="formInputObj.name" placeholder="Please enter your name" value="{{formInputObj.name}}">
+                    <!-- if isSuccess is true -->
+                    <div ng-if="isSuccess" class="centeredDiv">
+                        <p><img src="images\svg\speech-bubble.svg" class="img-responsive chatSuccessImg" width="20%" height="auto" alt="speech-bubble"></p>
+                        <div class="alert alert-dismissible alert-success successDiv">
+                            <p><strong>Thank You - {{userName}}</strong></p>
+                            <p>Your Post has been submitted successfully</p>
+                            <p>You can see your post in the <a href="#chatDetails">Chat Section</a></p>
+                        </div>
+                    </div>
+                    <!-- if isSuccess if false -->
+                    <div ng-if="!isSuccess">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <legend>Submit your post</legend>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+                                    <div class="col-lg-10">
+                                        <input type="text" class="form-control" id="inputName" ng-model="formInputObj.name" placeholder="Please enter your name" value="{{formInputObj.name}}">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="textArea" class="col-lg-2 control-label">Textarea</label>
-                                <div class="col-lg-10">
-                                    <textarea class="form-control" ng-model="formInputObj.comment" rows="3" id="textArea">{{formInputObj.comment}}</textarea>
-                                    <span class="help-block">Post your comments here...</span>
+                                <div class="form-group">
+                                    <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                                    <div class="col-lg-10">
+                                        <textarea class="form-control" ng-model="formInputObj.comment" rows="3" id="textArea">{{formInputObj.comment}}</textarea>
+                                        <span class="help-block">Post your comments here...</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-lg-10 col-lg-offset-2">
-                                    <button type="reset" class="btn btn-default" ng-click="clearPost()">Cancel</button>
-                                    <button type="submit" ng-click="submitPost(formInputObj)" class="btn btn-primary">Submit</button>
+                                <div class="form-group">
+                                    <div class="col-lg-10 col-lg-offset-2">
+                                        <button type="submit" ng-click="submitPost(formInputObj)" class="btn btn-primary">Submit</button>
+                                        <button type="reset" class="btn btn-default" ng-click="clearPost()">Cancel</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </fieldset>
-                    </form>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="closeWindow()">Close</button>
                 </div>
             </div>
         </div>

@@ -5,8 +5,7 @@
     var myRef = fbRef.getWeddingReference();
     var query = myRef.orderByChild("date"); //Order each key by their date property
     vm.chatList = $firebaseArray(query);
-    vm.chatListObject = $firebaseObject(myRef);
-
+    vm.chatListObject = $firebaseObject(myRef);    
     vm.displayDate = function(value){
         var myDate = new Date(value);
         var formatedTime=myDate.toDateString();

@@ -1,7 +1,7 @@
 (function(){
   angular.module('myApp',['firebase']);
   /*Declaring Firebase URL constants and Angular-Firebase Instances*/
-  angular.module('myApp').constant('weddingUrl','https://sumitwedding.firebaseio.com/');
+  angular.module('myApp').constant('weddingUrl','https://shwethapramodwedding.firebaseio.com/');
   /*Angular Firebase service*/
   angular.module('myApp').service('weddingRef',['weddingUrl',Firebase]);
   /*main Factory service to get all Firebase References*/

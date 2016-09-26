@@ -2,7 +2,6 @@
 * name: googleMapLoaderService
 * Loader service for Google Map API
 */
-
 (function(){
   // Google async initializer needs global function, so we use $window
 angular.module('myApp')
