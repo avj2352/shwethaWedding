@@ -50,7 +50,7 @@ function loadPage(page, pageElement) {
 
 	img.attr('src', 'pages/' +  page + '.jpg');
 
-	loadRegions(page, pageElement);
+	// loadRegions(page, pageElement);
 
 }
 

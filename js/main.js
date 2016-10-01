@@ -4,7 +4,7 @@
   //debugger;
   //Prelader for the wedding card
   //STEP1: Create a Loader
-  $('body').loadie(); // Change the wrapper if wanted.    
+  $('body').loadie(); // Change the wrapper if wanted.
     //Initialize the wedding card
     function loadApp() {
         $('#canvas').fadeIn(1000);
