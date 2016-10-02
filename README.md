@@ -31,3 +31,5 @@ This cool script will always load the Google Maps first before creating new Goog
 
 ### 2nd October 2016 - Added Song - Everything I do.mp3
 #### Integrated Music Plugin with Angular JS
+
+### Project completed - 2nd October 11:30 PM

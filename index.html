@@ -25,10 +25,11 @@
 		<div class="mainHeading container">
 			<h1>Pramod weds Shwetha</h1>
 			<div class="row" ng-controller="musicController">
-				<a ng-click="turnPrev()" class="btn btn-danger">{{prevPage}}</a>
-				<a class="btn btn-danger" data-toggle="modal" data-target="#myModal">{{postBtn}}</a>
-				<a class="btn btn-danger" href="#venueDetails">{{venueBtn}}</a>
-				<a ng-click="turnNext()" class="btn btn-danger">{{nextPage}}</a>
+				<a ng-click="turnPrev()" class="btn btn-danger">Previous Page</a>
+				<a class="btn btn-danger" data-toggle="modal" data-target="#myModal">Post a Wish</a>
+				<a class="btn btn-danger" ng-click="playMusic()">Play Music</a>
+				<a class="btn btn-danger" href="#venueDetails">Venue Details</a>
+				<a ng-click="turnNext()" class="btn btn-danger">Next Page</a>
 			</div>
 		</div>
 		<!-- end:Logo Granim JS -->

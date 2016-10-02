@@ -134,7 +134,9 @@
                 }
             };//$.mbAudio.sounds
             $.mbAudio.play('backgroundMusic', 'intro');
-            $timeout.cancel(promise);
+            if(!!promise){
+              $timeout.cancel(promise);
+            }
         }; //end:playMusic()
 
         var promise = $timeout(vm.playMusic, 4000);
