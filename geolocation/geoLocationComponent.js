@@ -6,25 +6,11 @@
     function geoLocationController($scope, geoLocationService, initializerGoogleMaps) {
         var vm = $scope;
         // debugger;
+        //NOTE: PAJ - 2nd October - getCurrentPosition doesn't work on browsers without https://
         vm.title = "Venue Map";
         vm.geoLocationText = "";
         vm.geoTimeStamp = "";
         vm.isLoadedMap = "false";
-        var geoCurrPosService = geoLocationService.getCurrentPosition();
-        geoCurrPosService.then(function(data) {
-            // if(Object.prototype.toString.call(data) === '[object Geolocation]'){
-            var latitude = data.coords.latitude;
-            var longitude = data.coords.longitude;
-            if (data.timestamp) {
-                var mydate = new Date(data.timestamp);
-                vm.geoTimeStamp = mydate;
-            } //endif
-            vm.geoLocationText = "Latitude: " + latitude + " , Longitude: " + longitude;
-            vm.showMap(data.coords); // Invoke the Google Map here
-            // }else{
-            // vm.geoLocationText = "Value returned is not an Object";
-            // }
-        }); //then()
 
         vm.showMap = function(coords) {
             //showMap will now load from googleMapLoaderService
@@ -85,6 +71,7 @@
             //Fading out the Loading Bar in Geolocation
             $(".loadingMap").fadeOut("slow");
         }; //end:showMap
+        vm.showMap(); // Invoke the Google Map here
     } //end:geoLocationController
 
     angular.module('myApp').component('geoMap', {

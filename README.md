@@ -28,3 +28,6 @@
 #### Added Google Map InfoWindow and Marker
 #### Created a initializerGoogleMaps Angular JS Service
 This cool script will always load the Google Maps first before creating new Google Map object.
+
+### 2nd October 2016 - Added Song - Everything I do.mp3
+#### Integrated Music Plugin with Angular JS

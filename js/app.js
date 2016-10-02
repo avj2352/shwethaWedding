@@ -105,3 +105,38 @@
       };
     });//reverseFunction
 }());//IIFE
+/*Music Plugin for Angular JS dependency with jquery.mb.audio.js*/
+(function(){
+  angular.module('myApp').controller('musicController',['$scope','$timeout', musicController]);
+  function musicController($scope, $timeout){
+    var vm = $scope;
+    vm.playMusic = function() {
+            // debugger;
+            console.log("Playing Music");
+            $.mbAudio.sounds = {
+                backgroundMusic: {
+                    id: "backgroundMusic",
+                    mp3: "audio/everything.mp3",
+                    sprite: {
+                        intro: {
+                            id: "intro",
+                            start: 0,
+                            end: 130,
+                            loop: true
+                        },
+                        fullSong: {
+                            id: "fullSong",
+                            start: 80,
+                            end: 116.975,
+                            loop: true
+                        }
+                    }
+                }
+            };//$.mbAudio.sounds
+            $.mbAudio.play('backgroundMusic', 'intro');
+            $timeout.cancel(promise);
+        }; //end:playMusic()
+
+        var promise = $timeout(vm.playMusic, 4000);
+  }//end:musicController
+}());//IIFE

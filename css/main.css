@@ -1,8 +1,14 @@
+@import 'https://fonts.googleapis.com/css?family=Playball|Contrail+One';
 @import 'https://fonts.googleapis.com/css?family=Pacifico|Satisfy';
 @import 'https://fonts.googleapis.com/css?family=Handlee';
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");/*!
 /*Wedding website template*/
 body{ overflow:hidden; overflow-y: scroll; background-color:#fcfcfc; background: url(../images/background_blur.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; margin:0; padding:0; }
+h1{font-family: 'Playball'; font-weight: bold; color: #064B86; text-shadow: rgb(224, 224, 224) 1px 1px 0px;}
+.translucentDiv { text-align: center; padding:5px; padding-top: 10px; color: #444444; border: 1px solid rgba(255,255,255,0.4); border-radius: 15px; font-size: 15px; background-color: #fff; background-color: rgba(255,255,255,0.4); margin-bottom: 15px; }
+span.bluishColor {color: #064B86;}
+.mainSectionParagraph{ font-family: 'Contrail One'; font-size: 18px;}
+.div_text_shadow { color: rgb(255, 199, 199); font-size: 56px; background-color: rgb(120, 120, 120); text-shadow: rgb(158, 27, 27) 5px 4px 4px; }
 .row,.chatSection,.container{background:none;}
 .mainHeading{ text-align: center; display: block; position: relative; /*margin-bottom: 10px;*/ /*z-index: 1000;*/ }
 .chatSection{ position: relative; /*background-color: #fff;*/ display: block; }
@@ -34,7 +40,10 @@ span.messageLikes img{position: relative; top: -3px;}
 .titleSubmitButton{position: relative; top:-5px; left: 10%; border:2px solid; border-radius:15px; font-family: 'Open Sans';}
 .myGoogleMap{ text-align: center; }
 .loadingMap{float:none; margin: auto;}
-.centeredDiv {float:none; margin:auto;}
+.centeredDiv {float:none; margin:auto; text-align: center;}
+.bookLinks{ font-size: 16px;}
+.bookLinks a{ color: #444444; cursor: pointer; padding: 0px 15px; text-decoration: none;}
+.bookLinks a:hover{ color: red; cursor: pointer; text-decoration: underline;}
 .mapArea{float:none; margin: auto; width: 100%; height: 470px; border-radius: 15px;}
 .chatSuccessImg{position: relative; top:25px; left: 75%;}
 .successDiv{border-radius: 15px; font-size: 15px;}
